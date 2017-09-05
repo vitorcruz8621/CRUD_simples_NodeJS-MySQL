@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario inclusão Contato</title>
+</head>
+<body>
+
+    <% include partials/botoes.ejs %>
+    <p/>
+
+    <table>
+
+        <form action="/create" method="post">
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="name" placeholder="Digite seu nome"></td>
+            </tr>
+
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" name="email" placeholder="Digite seu email"></td>
+            </tr>
+            
+            <tr>
+                <td><label>Phone</label></td>
+                <td><input type="text" name="phone" placeholder="Digite seu número"></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit"></td>
+                <!-- <td><button type="submit">Submit</button></td> <!--também funciona-->
+                <!-- <td><input type="submit" name="NÃOFUNCIONA_SE_USAR_NAME"></td>-->
+                <td></td>
+            </tr>
+        </form>
+
+        <tr>
+            <td><a href="/"> <button>Cancelar</button> </a></td>
+            <!-- <td><button><a href="/">HOME</a></button></td> -->
+            <td></td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
