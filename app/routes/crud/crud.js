@@ -9,11 +9,15 @@ module.exports = function(application){
         crud_path.read(application, req, res);
     });
 
+    application.get('/read/:id', (req, res)=>{
+        crud_path.readUmRegistro(application, req, res);
+    });
+
     application.get('/update', (req, res)=>{
         crud_path.index(application, req, res);
     });
 
     application.get('/delete/:id', (req, res)=>{
-        crud_path.deleteRegistro(application, req, res);
+        crud_path.deleteUmRegistro(application, req, res);
     });
 }
