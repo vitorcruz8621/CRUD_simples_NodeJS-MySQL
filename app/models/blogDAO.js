@@ -17,7 +17,7 @@ BlogDAO.prototype.read = function(/* err, */ callback){
 
 BlogDAO.prototype.readUmRegistro = function(blog_id, callback){
     //if (err) throw err;
-    this._connection.query('select * from contact quere id = ?', blog_id, callback);
+    this._connection.query('select * from contact where id = ?', blog_id, callback);
 }
 
 BlogDAO.prototype.update = function(callback){

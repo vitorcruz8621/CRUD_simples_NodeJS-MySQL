@@ -7,4 +7,8 @@ module.exports = function(application){
     application.get('/formulario_pesquisar_contato', (req, res)=>{
         formulario_path.formulario_pesquisar(application, req, res);
     });
+
+    application.get('/formulario_alterar_contato', (req, res)=>{
+        formulario_path.formulario_alterar(application, req, res);
+    });
 }

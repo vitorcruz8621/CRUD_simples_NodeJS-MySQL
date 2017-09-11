@@ -9,12 +9,12 @@ module.exports = function(application){
         crud_path.read(application, req, res);
     });
 
-    application.get('/read/:id', (req, res)=>{
+    application.get('/read/umregistro', (req, res)=>{
         crud_path.readUmRegistro(application, req, res);
     });
 
-    application.get('/update', (req, res)=>{
-        crud_path.index(application, req, res);
+    application.get('/update/:id', (req, res)=>{
+        crud_path.updateUmRegistro_p1(application, req, res);
     });
 
     application.get('/delete/:id', (req, res)=>{

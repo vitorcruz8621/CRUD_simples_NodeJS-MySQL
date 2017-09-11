@@ -15,7 +15,10 @@
             <tr>
                 <td>Telefone[<%= cont+1 %>] = </td> <td> <%= dadosBlog[cont].phone %></td>
             </tr>
-            <tr><td><a href="/delete/<%= dadosBlog[cont].id %>">EXCLUIR</a></td><td>--------------------</td></tr>
+            <tr>
+                <td><a href="/delete/<%= dadosBlog[cont].id %>">EXCLUIR</a></td>
+                <td><a href="/update/<%= dadosBlog[cont].id %>">ALTERAR</a></td>
+            </tr>
             <%
         }
     %>
