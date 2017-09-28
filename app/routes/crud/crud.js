@@ -1,5 +1,5 @@
 module.exports = function(application){
-    var crud_path = application.app.controllers.crud;
+    const crud_path = application.app.controllers.crud;
     
     application.post('/create', (req, res)=>{
         crud_path.create(application, req, res);
@@ -14,7 +14,11 @@ module.exports = function(application){
     });
 
     application.get('/update/:id', (req, res)=>{
-        crud_path.updateUmRegistro_p1(application, req, res);
+        crud_path.update(application, req, res);
+    });
+
+    application.post('/update_salvar', (req, res)=>{
+        crud_path.update_salvar(application, req, res);
     });
 
     application.get('/delete/:id', (req, res)=>{

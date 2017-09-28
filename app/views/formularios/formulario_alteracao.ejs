@@ -8,16 +8,29 @@
 </head>
 <body>
 
-    <h1>ALteração</h1>
+    <h1>Alteração</h1>
     <div>Alterar um contato</div><p/>
 
     <% include ../partials/botoes.ejs %>
 
     <table>
-        <form action="/read/:id" method="GET">
+        <form action="/update_salvar" method="POST">
             <tr>
-                <td><label>ID</label></td>
-                <td><label><input type="number" name="f_id"></label></td>
+                <td><label>id</label></td>
+                <td><label><input type="number" name="id" id="id" value="<%= id %>"></label></td>
+                <!-- <td><label><%= id %></label></td> -->
+            </tr>
+            <tr>
+                <td><label>Nome</label></td>
+                <td><label><input type="text" name="name" id="name"></label></td>
+            </tr>
+            <tr>
+                <td><label>E-mail</label></td>
+                <td><label><input type="text" name="email" id="email"></label></td>
+            </tr>
+            <tr>
+                <td><label>Telefone</label></td>
+                <td><label><input type="number" name="phone" id="phone"></label></td>
             </tr>
             <tr>
                 <td><input type="submit"></td>

@@ -1,6 +1,7 @@
 var application = require('express')();
 var consign = require('consign');
 var bodyParser = require('body-parser');
+const path = require('path');
 
 application.set('view engine', 'ejs');
 application.set('views', './app/views');
