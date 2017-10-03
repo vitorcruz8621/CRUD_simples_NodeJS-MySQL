@@ -54,10 +54,12 @@ module.exports.update = function(application, req, res){
     
     //var id_blog = JSON.stringify(req.params.id)
     var id = req.params.id
-    console.log(id)
+    //console.log(id)
+    console.log(JSON.stringify(req.params, null, 3) )
+    var dados_link = req.params
     
     //res.redirect('/formulario_alterar_contato')/* .json({id_blog: id_blog}) */;
-    res.render('formularios/formulario_alteracao', {id: id});
+    res.render('formularios/formulario_alteracao', {dados: dados_link}/* {id: id} */);
 }
 
 module.exports.update_salvar = function(application, req, res){

@@ -1,23 +1,24 @@
 <table>
     <%
         for ( var cont = 0; cont < dadosBlog.length; cont++ ) {
+            var _cont = dadosBlog[cont]
             %>
             <tr><td>-------------------Registro </td><td>-<%= cont+1 %>----------------</td></tr>
             <tr>
-                <td>ID[<%= cont+1 %>] = </td> <td> <%= dadosBlog[cont].id %></td>
+                <td>ID[<%= cont+1 %>] = </td> <td> <%= _cont.id %></td>
             </tr>
             <tr>
-                <td>Nome[<%= cont+1 %>] = </td> <td> <%= dadosBlog[cont].name %></td>
+                <td>Nome[<%= cont+1 %>] = </td> <td> <%= _cont.name %></td>
             </tr>
             <tr>
-                <td>Email[<%= cont+1 %>] = </td> <td> <%= dadosBlog[cont].email %></td>
+                <td>Email[<%= cont+1 %>] = </td> <td> <%= _cont.email %></td>
             </tr>
             <tr>
-                <td>Telefone[<%= cont+1 %>] = </td> <td> <%= dadosBlog[cont].phone %></td>
+                <td>Telefone[<%= cont+1 %>] = </td> <td> <%= _cont.phone %></td>
             </tr>
             <tr>
-                <td><a href="/delete/<%= dadosBlog[cont].id %>">EXCLUIR</a></td>
-                <td><a href="/update/<%= dadosBlog[cont].id %>">ALTERAR</a></td>
+                <td><a href="/delete/<%= _cont.id %>">EXCLUIR</a></td>
+                <td><a href="/update/<%= _cont.id %>&<%= _cont.name %>&<%= _cont.email %>&<%= _cont.phone %>">ALTERAR</a></td>
             </tr>
             <%
         }

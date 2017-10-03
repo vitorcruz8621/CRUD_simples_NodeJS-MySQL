@@ -17,20 +17,19 @@
         <form action="/update_salvar" method="POST">
             <tr>
                 <td><label>id</label></td>
-                <td><label><input type="number" name="id" id="id" value="<%= id %>"></label></td>
-                <!-- <td><label><%= id %></label></td> -->
+                <td><label><input type="number" name="id" id="id" value="<%= dados.id %>" disabled></label></td>
             </tr>
             <tr>
                 <td><label>Nome</label></td>
-                <td><label><input type="text" name="name" id="name"></label></td>
+                <td><label><input type="text" name="name" id="name" value="<%= dados.name%>"></label></td>
             </tr>
             <tr>
                 <td><label>E-mail</label></td>
-                <td><label><input type="text" name="email" id="email"></label></td>
+                <td><label><input type="text" name="email" id="email" value="<%= dados.email%>"></label></td>
             </tr>
             <tr>
                 <td><label>Telefone</label></td>
-                <td><label><input type="number" name="phone" id="phone"></label></td>
+                <td><label><input type="number" name="phone" id="phone" value="<%= dados.phone%>"></label></td>
             </tr>
             <tr>
                 <td><input type="submit"></td>

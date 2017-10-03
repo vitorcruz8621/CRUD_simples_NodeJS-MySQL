@@ -13,7 +13,7 @@ module.exports = function(application){
         crud_path.readUmRegistro(application, req, res);
     });
 
-    application.get('/update/:id', (req, res)=>{
+    application.get('/update/:id&:name&:email&:phone', (req, res)=>{
         crud_path.update(application, req, res);
     });
 
