@@ -17,7 +17,8 @@
         <form action="/update_salvar" method="POST">
             <tr>
                 <td><label>id</label></td>
-                <td><label><input type="number" name="id" id="id" value="<%= dados.id %>" disabled></label></td>
+                <td><label><input type="number" value="<%= dados.id %>" disabled></label></td>
+                <label><input type="hidden" name="id" id="id" value="<%= dados.id %>"></label>
             </tr>
             <tr>
                 <td><label>Nome</label></td>

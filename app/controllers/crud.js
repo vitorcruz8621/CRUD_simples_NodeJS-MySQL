@@ -50,12 +50,11 @@ module.exports.readUmRegistro = function (application, req, res) {
     });
 }
 
-module.exports.update = function(application, req, res){
+module.exports.update = function(application, req, res){    
     
-    //var id_blog = JSON.stringify(req.params.id)
-    var id = req.params.id
+    //var id = req.params.id
     //console.log(id)
-    console.log(JSON.stringify(req.params, null, 3) )
+    //console.log(JSON.stringify(req.params, null, 3) )
     var dados_link = req.params
     
     //res.redirect('/formulario_alterar_contato')/* .json({id_blog: id_blog}) */;
@@ -70,10 +69,6 @@ module.exports.update_salvar = function(application, req, res){
         var _dados = req.body;        
         console.log("Quase lá")    
         console.log(_dados)
-        /* console.log("--------------------")
-        console.log(_dados.f_name)
-        console.log(_dados.f_email)
-        console.log(_dados.f_phone) */
 
         blogModel.update(_dados, function(err){
             if (err) throw err;
